@@ -1,0 +1,111 @@
+ @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;700&display=swap');
+
+/** main code **/
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "cairo";
+    direction: rtl;
+    border: none;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: #393E46;
+}
+/** right side **/
+.right{
+    background: #dfdfdf;
+    height: 100vh;
+    width: 75%;
+    border-radius: 30px;
+    display: block;
+    justify-content: center;
+    padding: 20px 10px;
+}
+.right iframe{
+    border-radius: 30px;
+    width: 98%;
+    height: 45%;
+    float: top;
+}
+.list-item{
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 20px;
+    margin: 10px 0;
+    transition: 0.2s linear;
+}
+.list-item:hover{
+    background-image: linear-gradient(to left,#dc653a,transparent);
+}
+.list-item p{
+    color: #393E46;
+    font-size: 20px;
+    font-weight: bold;
+}
+.list-item img{
+    width: 50px;
+    border: 2px solid #dfdfdf;
+    border-radius: 50%;
+}
+
+/** middle **/
+.pomdoro{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://img.freepik.com/free-photo/tropical-beach_74190-188.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    width: 100%;
+    height: 100vh;
+}
+.pomdoro #time{
+    font-size: 64px;
+    font-weight: 300;
+    margin-top: 60%;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+.buttons img{
+    width: 50px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.buttons img:nth-child(2){
+    width: 80px;
+}
+/** left **/
+.left{
+    background: #dfdfdf;
+        height: 100vh;
+    width: 75%;
+    border-radius: 30px;
+    display: block;
+    justify-content: center;
+    padding: 20px 10px;
+}
+.left iframe{
+    border-radius: 30px;
+    width: 98%;
+    height: 100%;
+    float: top;
+}
