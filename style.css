@@ -1,0 +1,127 @@
+ @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;700&display=swap');
+
+/** main code **/
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "cairo";
+    border: none;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+}
+body , html{
+    padding: 20px;
+    height: 100%;
+    background-color: #393E46;
+}
+a{
+    text-decoration: none;
+    color: #393E46;
+}
+
+
+.container {
+    display: flex;
+    height: 100%; /* تعيين ارتفاع العنصر بنسبة للشاشة */
+    flex-direction: column; /* توجيه العناصر عمودياً */
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex: 1; /* توزيع الفراغ بالتساوي بين الأقسام */
+}
+
+.column {
+    flex: 1; /* توزيع العرض بالتساوي بين الأقسام */
+    padding: 10px;
+}
+
+.last-row {
+    display: flex;
+}
+
+.last-column {
+    flex: 1;
+    padding: 10px;
+}
+/** left **/
+
+.left iframe{
+    width: 100%;
+    height: 93%;
+    border-radius: 20px;
+}
+
+/** middle **/
+.middle {
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://img.freepik.com/free-photo/tropical-beach_74190-188.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    height: 93%;
+    margin: 0 40px;
+}
+
+.middle #time{
+    font-size: 64px;
+    font-weight: 300;
+    margin-top: 60%;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+.buttons img{
+    width: 50px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.buttons img:nth-child(2){
+    width: 80px;
+}
+/** right **/
+.right iframe{
+    width: 100%;
+    height: 93%;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+/** motivation **/
+.motivation {
+    background-color: orange;
+    border-radius: 30px;
+    margin-top: 5px;
+    text-align: center;
+    color: #393E46;
+    font-weight: bold;
+}
+
+/** teachers **/
+.teacher{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teacher .list-item{
+    background-color: #dfdfdf;
+    margin-right: 20px;
+    border-radius: 20px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.list-item p{
+    text-align: center;
+}
