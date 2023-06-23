@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+    <head>
+        <title>مساعد الدراسه</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- icon -->
+        <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/566/566985.png" type="image/x-icon" />
+        <!--icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="column left">
+                    <iframe scroll="no" scrolling="no" src="https://hatemmahmoud12.github.io/notes"></iframe>
+                </div>
+
+                <div class="column middle">
+                        <h1 id="time">00:00</h1>
+                        <div class="buttons">
+                            <img  src="stop.png" onclick="watchstop();" />
+                            <img  src="start.png" onclick="watchstart();" />
+                            <img src="reset.png" onclick="watchreset();"/>
+        
+                        </div>
+        
+                </div>
+
+                <div class="column right">
+                    
+            <iframe src="https://hatemmahmoud12.github.io/todolist1/" ></iframe>
+        
+            
+
+                </div>
+            </div>
+            <div class="last-row">
+                <div class="last-column motivation">لماذا توقفت تذكر لماذا بدأت</div>
+
+                <div class="last-column teacher">
+
+                    <a href="https://www.youtube.com/@Amr7efny" target="_blank">
+                        <div class="list-item">
+                            <p>عربي</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.youtube.com/@atazaky" target="_blank">
+                        <div class="list-item">
+                            <p>دراسات</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.youtube.com/@Mr-Talaat-Elghity" target="_blank"><div class="list-item">
+                            <p>Math</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.youtube.com/@elschoola/search?query=%D8%B3%D8%A7%D9%8A%D9%86%D8%B3" target="_blank">
+                        <div class="list-item">
+                            <p>Science</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.youtube.com/@amroragab" target="_blank">
+                         <div class="list-item">
+                            <p>English</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+</body>
+<script>
+    let [minutes , seconds] = [0,0];
+    let time = document.getElementById("time");
+    let timer = null;
+    let right = document.getElementById("right");
+    let right_container = document.getElementsByClassName("right");
+    const audio = new Audio();
+    audio.src = "complete.mp3";
+    
+    function stopwatch(){
+        seconds++;
+        if(seconds == 60){
+           seconds = 00;
+            minutes++;
+           }
+        let m = minutes < 10 ? "0" + minutes : minutes;
+        let s = seconds < 10 ? "0" + seconds : seconds; 
+        time.innerHTML = m +":"+ s;
+        if(time.innerHTML=="25:00"){
+            clearInterval(timer);
+            time.innerHTML="00:00";
+            [minutes,seconds] = [0,0];
+            audio.play();
+           }
+    }
+    function watchstart(){
+        if(timer!== null){
+            clearInterval(timer);
+        }
+        timer = setInterval(stopwatch,1000);
+    }
+    function watchstop(){
+        clearInterval(timer);
+    }
+    function watchreset(){
+        clearInterval(timer);
+        [minutes,seconds] = [0,0];
+        time.innerHTML="00:00";
+    }
+</script>
+
+</html>
